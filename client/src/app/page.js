@@ -13,7 +13,7 @@ import {
 } from "react-icons/fi";
 import EmojiPicker from "emoji-picker-react";
 
-const socket = io("http://localhost:4000");
+const socket = io("https://chap-app-peach.vercel.app/");
 
 const Page = () => {
   const [message, setMessage] = useState("");

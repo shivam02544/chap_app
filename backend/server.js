@@ -5,7 +5,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: process.env.CORS_ORIGIN,
     methods: ["GET", "POST"],
   },
 });
@@ -52,6 +52,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.port || 4000, () => {
+server.listen(process.env.PORT || 4000, () => {
   console.log("Server running on port 4000");
 });
