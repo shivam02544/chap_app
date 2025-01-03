@@ -5,7 +5,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
-    origin: process.env.CORS_ORIGIN,
+    origin: `https://chap-app-flame.vercel.app`,
     methods: ["GET", "POST"],
   },
 });
